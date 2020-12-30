@@ -14,9 +14,9 @@ body {
     font-family: 'Conv_MuseoSansCyrl_0';
     background: url(images/bg.png) no-repeat; 
     background-size: cover;
-
+    overflow: hidden;
+    box-sizing: border-box;
 }
-
 .header {
     display: flex;
     justify-content: space-between;
@@ -24,18 +24,30 @@ body {
     height: 230px;
     margin: 0 auto;
     width: 90%;
-} 
+}  
 
 .header__logo {
     display: flex;
     align-items: center;
-    width: 146px;
+    width: 100%;
     height: 55px;
     padding: 5px 0 0 103px;
 } 
 
+@media ( max-width: 768px - 0.02px) {
+    .header__logo {
+        height: 20px;
+    }
+}
+
+
+@media ( min-width: 768px) {
+    .header__logo {
+        height: 30px;
+    }
+}
+
 .header__menu {
-    display: flex;
     justify-content: flex-end;
 }
 
@@ -116,4 +128,34 @@ body {
 .image__item {
     margin-left: 30px;
 
+}
+
+@media ( max-width: 768px) {
+    .header__menu {
+        display: none;
+    }
+}
+
+@media ( min-width: 768px) {
+    .header__menu {
+        display: flex;
+    }
+}
+
+@media (max-width: 1366px) {
+    
+    .header {
+        height: 160px;
+        width: 92%;
+    }
+
+    /* .header__logo {
+        width: 100%;
+        height: 20px;
+    } */
+
+    .header__list-item {
+        font-size: 16px;
+        margin-right: 0;
+    }
 }
